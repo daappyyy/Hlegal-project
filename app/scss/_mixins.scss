@@ -1,0 +1,39 @@
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin main-gradient-text($bg-color: $gradient-red-text){
+    background: $bg-color;
+    color: transparent;
+    background-clip: text; 
+}
+@mixin title($color: $basic-white){
+	font-size: 38px;
+	font-weight: 700;
+	color: $color;
+    line-height: normal;
+}
+@mixin subtitle($color: #000) {
+	font-weight: 700;
+	font-size: 30px;
+	color: $color;
+    line-height: normal;
+
+    @media (min-width: $breakpoint-md){
+        font-size: 38px;
+    }
+}
+@mixin link($color: $regular-color, $hover: $accent-color){
+    color: $color;
+    text-decoration: none;
+    transition: .2s;
+
+    &:hover{
+        color: $hover;
+    }
+
+    &:hover::before{
+        border-color: $accent-color;
+    }
+}

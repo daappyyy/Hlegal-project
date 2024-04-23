@@ -1,0 +1,128 @@
+.footer {
+    background: $bg-color;
+    padding: 30px 0 30px;
+    @media screen and (min-width: $breakpoint-md){
+        padding-bottom: 0;
+    }
+    // .footer__container
+
+    &__container {
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        @media screen and (min-width: $breakpoint-md){
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+    }
+    // .footer__address
+
+    &__address {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+
+        @media screen and (min-width: $breakpoint-md){
+            flex-direction: row;
+        }
+        @media screen and (min-width: $breakpoint-lg){
+            flex: 1 0 60%;
+        }
+    }
+   
+    
+
+
+    // .footer__adress-street
+
+    &__adress-street {
+        font-weight: 400;
+        color: $main-color;
+    }
+    // .footer__address-map
+
+    &__address-map {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $regular-color;
+        font-size: 12px;
+        font-weight: 700;
+
+        &:hover{
+            color: $accent-color;
+        }
+    }
+
+    // .footer__contact
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+        @media screen and (min-width: $breakpoint-md){
+            order: 1;
+            flex-direction: row;
+        }
+        margin: 20px 0 30px;
+    }
+
+    // .footer__contact-social
+
+    &__contact-social {
+        display: block;
+        svg {
+			width: 38px;
+			height: 38px;
+			fill: $regular-color;
+		}
+    }
+
+	&__contact-number {
+        display: block;
+        text-decoration: none;
+        font-weight: 700;
+        color: $main-color;
+	}
+
+		// .footer__contact-email
+
+	&__contact-email {
+        display: block;
+        text-decoration: none;
+        font-weight: 700;
+        color: $regular-color;
+
+        &:hover{
+            color: $accent-color;
+        }
+	}
+
+
+    // .footer__copyright
+
+    &__copyright {
+        color: $text-color;
+        @media screen and (min-width: $breakpoint-md){
+            align-content: flex-start;
+        }
+    }
+
+    
+}
+.container {
+}
+.dotted {
+}
+.dotted--dark {
+}

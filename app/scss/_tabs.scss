@@ -1,0 +1,108 @@
+.tabs {
+    padding: 30px 0;
+    overflow-x: hidden;
+    // .tabs__container
+
+    &__container {
+        @media screen and (min-width: $breakpoint-lg)  {
+			display: flex;
+		}
+    }
+
+    // .tabs__links
+
+    &__links {
+        display: flex;
+        gap: 30px ;
+        white-space: nowrap;
+        overflow: auto;
+        padding-bottom: 20px;
+        margin-right: -30px;
+        padding-right: 30px;
+
+        &::-webkit-scrollbar{
+            width: 0;
+        }
+        @media screen and (min-width: $breakpoint-md){
+            margin-right: calc(324px - 50vw);
+        }
+        @media screen and (min-width: $breakpoint-lg){
+            margin-right: 0;
+            padding: 0;
+            flex-direction: column;
+            padding-right: 60px;
+            border-right: 4px solid rgba($text-color, .3);
+            flex: 1 1 45%;
+            align-items: flex-end;
+            overflow: visible;
+        }
+        @media screen and (min-width: $breakpoint-xxl) {
+			flex: 1 1 27%;
+		}
+    }
+
+    // .tabs__links-item
+
+    &__links-item {
+        @include subtitle($text-color);
+        cursor: pointer;
+
+        &:hover{
+            color: $accent-color;
+        }
+        &.active{
+            @include main-gradient-text;
+        }
+    }
+
+    // .tabs__content
+
+    &__content {
+        padding-top: 34px;
+		border-top: 4px solid rgba($text-color, .3);
+        color: $basic-white;
+
+        @media screen and (min-width: $breakpoint-lg){
+        display: flex;
+        align-items: center;
+        border-top: none;
+        padding-top: 0;
+        padding-left: 60px;
+        flex: 1 1 45%;
+        }
+        @media screen and (min-width: $breakpoint-xxl) {
+			flex: 1 1 70%;
+		}
+    }
+
+    // .tabs__content-item
+
+    &__content-item {
+        display: none;
+
+        &.active{
+            display: block;
+        }
+    }
+
+    // .tabs__content-desc
+
+    &__content-desc {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 30px;
+    
+    }
+
+    // .tabs__content-title
+
+    &__content-title {
+        font-weight: 700;
+        font-size: 20px;
+        padding-bottom: 30px;
+
+        @media screen and (min-width: $breakpoint-lg){
+            font-size: 30px;
+        }
+    }
+}

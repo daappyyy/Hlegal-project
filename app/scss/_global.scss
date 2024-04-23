@@ -1,0 +1,138 @@
+body{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    scroll-behavior: smooth;
+    line-height: normal;
+}
+a{
+    text-decoration: none;
+}
+.wrapper{
+    background: $gradient-supersoft;
+    border-radius: 0px 0px $radius-md $radius-md;
+    position: relative;
+
+    &::before, &::after{
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        right: 20px;
+        left: 20px;
+        height: 10px;
+        background: $under_section_dark-color;
+        border-radius: 0 0 $radius-md $radius-md;
+    }
+    &::after{
+        bottom: -20px;
+        right: 40px;
+        left: 40px;
+        background: $under_section_light-color;
+    }
+}
+
+.container{
+    //від 0 до 767 включно
+    padding: 0 30px;
+
+    @media screen and (min-width: $breakpoint-md) {
+        //від 768 до 1023 включно
+        max-width: 708px; //648+60
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: $breakpoint-lg) {
+        //від 1024 до 1439 включно
+        max-width: 964px;
+    }
+    @media screen and (min-width: $breakpoint-xl) {
+        //від 1440 до 1919 включно
+        max-width: 1380px;
+    }
+    @media screen and (min-width: $breakpoint-xxl) {
+        //від 1920 до безкінечності
+        max-width: 1660px;
+    }
+}
+.dotted{
+    display: none;
+    width: 6px;
+    height: 6px;
+    border-radius: $radius-rounded;
+
+    @media screen and (min-width: $breakpoint-md){
+        display: inline-block;
+    }
+    &--light{
+        background: $basic-white;
+    }
+    &--dark{
+        background: $text-color;
+    }
+    &--lightThemeDot{
+        background: $light-dot-color;
+    }
+    &--lightThemeDotTeam{
+        background: $light-dot-color;
+        display: none;
+    }
+}
+.dotted-team{
+    display: none;
+    width: 6px;
+    height: 6px;
+    border-radius: $radius-rounded;
+    background: $light-dot-color;
+    @media screen and (min-width: $breakpoint-xl){
+        display: inline-block;
+    }
+}
+.section-desc{
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $regular-color;
+    position: relative;
+}
+.section-desc::before{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    top: 5.5px;
+    left: 75px;
+    border-bottom: 2px solid $regular-color;
+    border-right: 2px solid $regular-color;
+    transform: rotate(-45deg);
+}
+.section-desc:hover,
+.section-desc:hover::before{
+    color: $accent-color;
+    border-color: $accent-color;
+
+}
+:hover, :hover::before{
+        transition: linear .2s;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 30px;
+    position: relative;
+}
+
+.button {
+    cursor: pointer;
+    padding: 18px 30px;
+    background: $regular-color;
+    box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.50);
+    border-radius: $radius-md;
+    color: $basic-white;
+    font-weight: 700;
+
+    &:active{
+        background: #38a9fa;
+    }
+}

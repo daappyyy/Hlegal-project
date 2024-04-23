@@ -1,0 +1,84 @@
+.partners {
+    &--paddingPartners{
+        padding-top: 80px;
+    }
+  @media screen and (min-width: $breakpoint-xxl){
+            padding-bottom: 60px;
+        }
+    // .partners__container
+    &__container {
+    }
+    // .partners__cards
+
+    &__cards {
+        height: 720px;
+        overflow: auto;
+        @media screen and (min-width: $breakpoint-md){
+            display: flex;
+            flex-wrap: wrap;
+            height: auto; 
+        }
+        @media screen and (min-width: $breakpoint-xxl){
+            margin: 0 100px 0;
+            border-radius: $radius-md;
+        }
+    }
+    // .partners__card
+
+    &__card {
+        min-width: 250px;
+        flex: 1 1 30%;
+    }
+
+    // .partners__card-icon
+
+    &__card-icon {
+       height: 120px;
+    }
+
+     // .partents__desc
+
+     &__desc {
+        font-size: 14px;
+        font-weight: 700;
+        color: $main-color;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+.hillel {
+    background: $hillel-color url(../images/Hillel.png) center no-repeat;
+}
+.wannabiz {
+    background: $wannabiz-color url(../images/WannaBiz.png) center no-repeat;
+}
+.targerine {
+    background: url(../images/tapgerine.png) no-repeat center, $tapgerine-color; 
+};
+.look {
+    background: $look-color url(../images/3dlook.png) center no-repeat;
+}
+.orangear {
+    background: $orangear-color url(../images/orangear.png) center no-repeat;
+}
+.adtelligent {
+    background: $adtelligent-color url(../images/adtelligent.png) center no-repeat;
+}
+.clickky {
+    background: $clickky-color url(../images/clickky.png) center no-repeat;
+}
+.ecolease {
+    background: $ecolease-color url(../images/ecolease.png) center no-repeat;
+}
+.infratek {
+    background: $infratek-color url(../images/infratek.png) center no-repeat;
+}
+.citypark {
+    background: $citypark-color url(../images/Hillel.png) center no-repeat;
+}
+.artprint {
+    background: $artprint-color url(../images/tapgerine.png) center no-repeat;
+}
+.ultimate {
+    background: $basic-black url(../images/ultimate.png) center no-repeat;
+}

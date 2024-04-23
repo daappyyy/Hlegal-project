@@ -1,0 +1,398 @@
+.head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background: url('../images/H-Symbol.svg') no-repeat center/auto 100%;
+
+
+    // .head__header
+
+    &__header {
+        padding-bottom: 10px;
+    }
+
+    // .head__title
+
+    &__title {
+        @include title;
+        text-align: center;
+    }
+
+    // .head__link
+
+    &__link {
+        width: 42px;
+        height: 42px;
+        border-radius: $radius-rounded;
+        border: 2px solid $basic-white;
+        margin: 0 auto 30px;
+        position: relative;
+
+       
+        &::before{
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 12.5px;
+            width: 14px;
+            height: 14px;
+            border-bottom: 2px solid $basic-white;
+            border-right: 2px solid $basic-white;
+            transform: rotate(45deg);
+        }
+
+         &:hover, &:hover::before{
+            border-color: $accent-color;
+        }
+    }
+}
+.header {
+
+    @media screen and (min-width: $breakpoint-md){
+        padding-top: 50px;
+    }
+
+    // .header__container
+    &__container {
+        position: relative;
+    }
+
+    // .header__inner
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 30px;
+        background: rgba(245, 245, 250, 0.20);
+        margin: 0 -30px 15px;
+        &--lightPage{
+            background-color: $bg-color;
+        }
+
+        @media screen and (min-width: $breakpoint-md) {
+            background: none;
+            margin: 0 0 30px;
+            padding: 0;
+            justify-content: flex-start;
+            gap: 6px;
+
+        }
+        @media screen and (min-width: $breakpoint-lg){
+            margin: 0 0 16px;
+            justify-content: flex-end;
+        }
+    }
+
+    // .header__lang
+
+    &__lang {
+    display: flex;
+    }
+
+    // .header__lang-item
+
+    &__lang-item {
+    }
+
+    // .header__lang-link
+
+    &__lang-link {
+    display: block;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 6px 7px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $basic-white;
+    border-radius: $radius-sm;
+    &:hover{
+        background-color: $hover-bg-color;
+    }
+    &.active{
+        background-color: $accent-color;
+    }
+
+    &--lightPageText{
+        color: $text-color;
+        &:hover{
+            background-color: $bg-color;
+        }
+    }
+}
+    // .header__address
+
+    &__address {
+    display: none;
+    @media screen and (min-width: $breakpoint-md){
+        display: block;
+        color: $text-color;
+    }
+    }
+
+    // .header__phone
+
+    &__phone {
+        color: $basic-white;
+        text-decoration: none;
+        font-weight: 700;
+
+        &--lightPageText{
+            color: $text-color;
+        }
+    }
+
+    // .header__social
+
+    &__social {
+		display: none;
+
+		@media screen and (min-width: $breakpoint-md) {
+			display: block;
+		}
+		
+		svg {
+			width: 24px;
+			height: 24px;
+			fill: $basic-white;
+		}
+        // svg:hover {
+		// 	fill: $accent-color;
+		// }
+        
+	}
+
+    // .header__box
+
+    &__box {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        @media screen and (min-width: $breakpoint-md){
+            padding-bottom: 0;
+        }
+        @media screen and (min-width: $breakpoint-lg){
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            transform: translateY(-50%);
+
+        }
+    }
+
+	// .header__box-wrapper
+
+	&__box-wrapper {
+        display: flex;
+        gap: 4px;
+	}
+
+
+
+    // .header__logo
+
+    &__logo {
+        @media screen and (min-width: $breakpoint-md){
+            margin-bottom: 30px;
+        }
+
+        @media screen and (min-width: $breakpoint-lg){
+          margin: 0;
+        }
+        img{
+            width: 69px;
+            height: 32px; 
+            @media screen and (min-width: $breakpoint-md){
+                width: 130px;
+                height: 60px;
+         }
+         }
+       
+    }
+
+    &__slash {
+        width: 12px;
+        height: 26px;
+        @media screen and (min-width: $breakpoint-md){
+            width: 21px;
+            height:47px;
+        }
+	}
+
+	&__page {
+		color: $basic-white;
+        font-size: 20px;
+        font-weight: 400;
+        @media screen and (min-width: $breakpoint-md){
+            font-size: 36px;
+        }
+        &--darkText{
+            color: $main-color;
+        }
+	}
+
+
+    // .header__burger
+
+    &__burger {
+        cursor: pointer;
+        width: 24px;
+        height: 16px;
+        margin-left: auto;
+        position: relative;
+        @media screen and (min-width: $breakpoint-md){
+            display: none;
+        }
+
+        &::before, 
+        &::after, 
+        span{
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1.5px;
+            background: $basic-white;
+        }
+
+        &--darkBurger::before,
+        &--darkBurger::after,
+        &--darkBurger span{
+            background: $main-color;
+}
+        &::after{
+            top: auto;
+            bottom: 0;
+        }
+        span{
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    // .header__nav
+
+    &__nav {
+        position: fixed;
+        z-index: 50;
+        bottom: -110%;
+        left: 8px;
+        right: 8px;
+        background-color: $basic-white;
+        padding: 12px;
+        border-radius: $radius-md $radius-md 0 0;
+        transition: all .4s linear;
+        &.active{
+            bottom: 0;
+        }
+        // display: none;
+        @media screen and (min-width: $breakpoint-md){
+            position: static;
+            padding: 0;
+            background: none;
+        }
+    }
+
+    &__nav-close{
+        width: 20px;
+        height: 20px;
+        position: relative;
+        cursor: pointer;
+        margin: 7px 0 27px auto;
+        &::before,
+        &::after{
+            content: '';
+            position: absolute;
+            top: 9px;
+            left: 0;
+            width: 100%;
+            height: 1.5px;
+            background-color: $accent-color;
+            transform: rotate(45deg);
+        }
+        &::after{
+            transform: rotate(-45deg);
+        }
+        @media screen and (min-width: $breakpoint-md){
+            display: none;
+        }
+    }
+
+    // .header__list
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        @media screen and (min-width: $breakpoint-md){
+            flex-direction: row;
+        }
+        @media screen and (min-width: $breakpoint-lg){
+            justify-content: flex-end;
+        }
+        
+    }
+
+    // .header__list-item
+
+    &__list-item {
+        position: relative;
+    }
+
+    // .header__list-link
+
+    &__list-link {
+        display: block;
+        text-align: center;
+        border-radius: $radius-md;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 7px;
+        background: $bg-color;
+        color: $active-color;
+        &:hover{
+            background: $separator-color;
+        }
+        &.active{
+            color: $accent-color;
+         }
+        @media screen and (min-width: $breakpoint-md){
+            color: $basic-white;
+            padding: 0;
+            background: transparent;
+            &:hover{
+                background: none;
+            }
+
+            &:hover::before{
+                position: absolute;
+                content: '';
+                bottom: -3px;
+                left: 0;
+                right: 0;
+                background: $basic-white;
+                width: 100%;
+                height: 2px;
+            }
+            &.active:hover::before{
+                background: $accent-color;
+            }
+
+            &--blue{
+                color: $regular-color;
+            }
+            &--blue:hover::before{
+                background-color: $regular-color;
+            }
+        }
+    }
+}
+.container {
+}
+.dotted {
+}
+.dotted--light {
+}

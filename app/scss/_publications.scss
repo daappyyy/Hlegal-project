@@ -1,0 +1,132 @@
+.publications {
+    padding: 30px 0 30px;
+    background: $bg-color;
+    position: relative;
+    &--rounded{
+        border-radius: 12px 12px 0 0;
+        margin-top: 60px;
+    }
+    // .publications__container
+    &__container {
+    }
+
+    // .publications__section-desc
+
+    &__section-desc {
+        margin-bottom: 5px;
+        &:before{
+        left: 112px;
+        }
+    }
+
+    // .publications__title
+
+    &__title {
+        @include subtitle($text-color);
+        @include main-gradient-text;
+        margin-bottom: 30px;
+    }
+
+    // .publications__cards
+
+    &__cards {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+        flex-wrap: wrap;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 2px;
+            bottom: -30px;
+            left: 0;
+            right: 0;
+            background: $separator-color;
+        }
+        @media screen and (min-width: $breakpoint-md){
+            flex-direction: row;
+        }
+        &--publications::before {
+            bottom: -146px;
+        }
+    }
+    // .publications__card
+
+    &__card {
+        background-color: $basic-white;
+        border-radius: $radius-md;
+        overflow: hidden;
+        @media screen and (min-width: $breakpoint-md){
+            flex: 1 0 45%;
+        }
+        @media screen and (min-width: $breakpoint-lg){
+            flex: 1 0 30%;
+        }
+    }
+
+    // .publications__card-image
+
+    &__card-image {
+        height: 200px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .publications__card-description
+
+    &__card-description {
+        padding: 30px;
+    }
+
+    // .publications__card-title
+
+    &__card-title {
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 700;
+        color: $regular-color;
+        margin-bottom: 15px;
+    }
+
+    // .publications__card-data
+
+    &__card-data {
+        font-size: 12px;
+        font-weight: 700;
+        color: $text-color;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 4px;
+            background: $separator-color;
+        }
+    }
+
+    // .publications__card-article
+
+    &__card-article {
+        font-size: 14px;
+        font-weight: 400;
+        color: $basic-black;
+        line-height: 157%;
+    }
+}
+.container {
+}
+.section-desc {
+}

@@ -1,0 +1,53 @@
+$main-color: #323264;
+$alt-color: #46466E;
+$soft-color: #686887;
+$accent-color: #F0145A;
+$basic-white: #FFF;
+$basic-black: #000;
+
+$regular-color: #24A3FF;
+$hover-color: #0085FF;
+$active-color: #006CCF;
+
+$bg-color: #F5F5FA;
+$bg-alt-color: #EDEDF7;
+$text-color: #B3B3BA;
+$separator-color: #E6E6F0;
+$under_section_dark-color: #CACADB;
+$under_section_light-color:#E7E7F2;
+$light-dot-color: #E6E6F0;
+
+// partners colors:
+$hillel-color: #1C4280;
+$wannabiz-color: #143646;
+$tapgerine-color: linear-gradient(0deg, #F48B30 0%, #F48B30 100%);
+$look-color: #9E4DC3;
+$orangear-color: #FD9339;
+$adtelligent-color: #E2E2E4;
+$clickky-color: #C71C36;
+$ecolease-color: #DCF3F9;
+$infratek-color: #EAEAEA;
+$citypark-color: #282240;
+$artprint-color: #1D4568;
+
+
+$gradient: linear-gradient(129deg, #323264 0%, #323264 73.96%, #A54B5F 100%);
+$gradient-soft: linear-gradient(42deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
+$gradient-red: linear-gradient(323deg, #F0145A 6.7%, #693264 70.36%);
+$gradient-supersoft: linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+$gradient-red-text: linear-gradient(90deg, #F0145A 0.84%, #EF8080 99.96%);
+
+$hover-bg-color: rgba(255, 255, 255, 0.20);
+
+
+
+
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-rounded: 50%;
+
+//breakpoints
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1440px;
+$breakpoint-xxl: 1920px;

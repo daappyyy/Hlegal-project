@@ -1,0 +1,106 @@
+.services {
+padding: 0 0 60px;
+
+&--paddingServices{
+    padding-top: 30px;
+
+    @media screen and (min-width: $breakpoint-md){
+        padding-top: 60px;
+    }
+}
+    // .services__container
+
+    &__container {
+    }
+
+    // .services__section-desc
+
+    &__section-desc {
+        margin-bottom: 5px;
+    }
+    
+    // .services__title
+
+    &__title {
+        @include subtitle($text-color);
+        @include main-gradient-text;
+        margin-bottom: 45px;
+    }
+
+    // .services__cards
+
+    &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media screen and (min-width: $breakpoint-md){
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 60px;
+    }
+    }
+
+    // .services__card
+
+    &__card {
+        @media screen and (min-width: $breakpoint-md){
+            flex: 1 1 45%;
+        }
+        @media screen and (min-width: $breakpoint-lg){
+            flex: 1 1 28%;
+        }
+      
+    }
+
+    // .services__card-icon
+
+    &__card-icon {
+        width: 92px;
+        height: 92px;
+        margin-bottom: 30px;
+    }
+
+    // .services__card-description
+
+    &__card-description {
+        font-size: 16px;
+        color: $basic-white;
+        line-height: 162%;
+    }
+
+    // .services__card-title
+
+    &__card-title {
+        display: block;
+        font-size: 22px;
+        font-weight: 700;
+        color: $regular-color;
+        margin: 0 0 15px;
+
+        &:hover{
+            color: $accent-color;
+        }
+    }
+}
+.container {
+    
+}
+.ecommerce {
+    background: url(../images/css_sprites.png) ;
+}
+.support {
+    background: url(../images/css_sprites.png) -184px 0;
+}
+.corporate {
+    background: url(../images/css_sprites.png) -92px 0;
+}
+.trust {
+    background: url(../images/css_sprites.png) -369px 0;
+}
+.protection {
+    background: url(../images/css_sprites.png) -276px 0;
+}
+.court {
+    background: url(../images/css_sprites.png) -460px -0;
+}
