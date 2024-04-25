@@ -147,7 +147,6 @@
 
     &__social {
 		display: none;
-
 		@media screen and (min-width: $breakpoint-md) {
 			display: block;
 		}
@@ -156,13 +155,19 @@
 			width: 24px;
 			height: 24px;
 			fill: $basic-white;
+
+            &:hover{
+                fill: $accent-color;
+                transition: linear .2s;
+            }
 		}
-        // svg:hover {
-		// 	fill: $accent-color;
-		// }
         
 	}
 
+    .lightsvg {
+        fill: $text-color;
+    }
+    
     // .header__box
 
     &__box {
@@ -237,23 +242,27 @@
 
     &__burger {
         cursor: pointer;
-        width: 24px;
-        height: 16px;
+        width: 32px;
+        height: 32px;
         margin-left: auto;
         position: relative;
         @media screen and (min-width: $breakpoint-md){
             display: none;
         }
-
+        &:active{
+            background: $hover-bg-color;
+            border-radius: $radius-sm;
+        }
         &::before, 
         &::after, 
         span{
             content: ' ';
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 7px;
+            left: 6.5px;
             right: 0;
-            height: 1.5px;
+            width: 20px;
+            height: 2px;
             background: $basic-white;
         }
 
@@ -261,10 +270,13 @@
         &--darkBurger::after,
         &--darkBurger span{
             background: $main-color;
-}
+        }
+        &--darkBurger:active{
+            background: $separator-color;
+        }
         &::after{
             top: auto;
-            bottom: 0;
+            bottom: 7px;
         }
         span{
             top: 50%;

@@ -85,6 +85,11 @@
 			width: 38px;
 			height: 38px;
 			fill: $regular-color;
+
+            &:hover{
+                fill: $accent-color;
+                transition: linear .2s;
+            }
 		}
     }
 

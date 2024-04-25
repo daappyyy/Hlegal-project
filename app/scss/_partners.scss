@@ -3,7 +3,7 @@
         padding-top: 80px;
     }
   @media screen and (min-width: $breakpoint-xxl){
-            padding-bottom: 60px;
+            padding: 0 100px 60px;
         }
     // .partners__container
     &__container {
@@ -19,7 +19,6 @@
             height: auto; 
         }
         @media screen and (min-width: $breakpoint-xxl){
-            margin: 0 100px 0;
             border-radius: $radius-md;
         }
     }

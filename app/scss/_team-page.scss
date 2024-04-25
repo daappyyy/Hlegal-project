@@ -8,6 +8,22 @@
     &__container {
     }
 
+
+	// .team-page__title-wrapper
+
+	&__title-wrapper {
+        @media screen and (min-width: $breakpoint-lg){
+            max-width: 664px;
+            margin: 0 auto;
+        }
+        @media screen and (min-width: $breakpoint-xl){
+            max-width: 1080px;
+        }
+        @media screen and (min-width: $breakpoint-xxl){
+            max-width: 1360px;
+        }
+	}
+
     // .team-page__title
 
     &__title {
