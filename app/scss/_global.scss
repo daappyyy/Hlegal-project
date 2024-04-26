@@ -7,6 +7,14 @@ body{
 a{
     text-decoration: none;
 }
+html, body{
+    height: 100%;
+}
+.flex-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 .wrapper{
     background: $gradient-supersoft;
     border-radius: 0px 0px $radius-md $radius-md;
